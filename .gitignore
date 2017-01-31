@@ -7,6 +7,9 @@
 !1*
 !2*
 !readme.md
+!images
+!*.png
+!*.jpeg
+!*.jpg
 
-# ...even if they are in subdirectories
 !*/
