@@ -6,26 +6,29 @@ An extensible, __by design__, natural language processing library and detection 
 
 ## Motivation
 
-There are more than few NLP projects out there, however when your project is built with Node.js and the NLP you're using is written in another language, this puts an unnecessary level of complexity and more experience requirements for your team.
+There are more than few NLP projects out there, however when your project is built with Node.js and the NLP you're using is written in another language (python is common choice), this puts an unnecessary level of complexity and more experience requirements for your team.
 
 JavaScript and Node.js is rising in the bots world, where natural language processing is a core requirement, yet the best natural language processing projects are written in other languages.
 
-This is not say that this project is supposed to be an alternative to the established state of the art current solutions, but it tries to provide you with a handy features and tools that might cover your needs.
+I'm not saying that this project is supposed to be an alternative to the established state of the art current solutions, but it tries to provide you with a handy features and tools that might cover your needs.
 
 ## Extensibility by Nature
 
-The core library provides you with:
+To understand the concept of __extensibility by nature__ you must understand the core architecture of this project and how it's supposed to be used.
 
-- **Sentence level lexer**: this is used to break a string of text into multiple sentences.
-- **Token level lexer**: this is used to break each sentence into multiple tokens
-- **POS tagger**: Annotate each token with the appropriate part of speech tag, `NN` for a noun, `NNS` for a plural noun, `VBP` for a present verb ...etc
-- **Dependency Parser**: Resolve each token dependencies and annotate them, for example the verbal phrase may have two dependents: `NSUBJ` a nominal subject, and `DOBJ` a direct object.
+Almost every natural language processor comes bundled with the following processors:
 
-Those are what we're going to call: **processors**. On top of those **processors** you can build **detectors**.
+- A lexer: which separates tokens (words) from each other, converting a string of text that represents a sentence like this one: `"That's a sentence"` to a list (array) of tokens: `["That","'s","a","sentence]`.
 
-For example using the tokens and the dependency parser you can detect local token emphasis. So a sentence like this one: `Alex explicitly stated his dissatisfaction` a detector can look for adverbs of emphasis, like `explicitly` and based on the dependency parser looks for the nearest ancestral verb, which is `stated` in the above example and mark it as being emphasized.
+- A part of speech tagger: that is basically annotates each token with the appropriate part of speech (POS) tag. `a` is tagged as `determiner`, `Alex` is tagged as `proper noun` ...etc.
 
-So, extensibility by nature describes the fact that this framework doesn't have a detectors in it's core, but it's so trivial to add your own, using the built-in processors.
+- A dependency parser: which tries to analyze the sentence and figure out the relationships between the tokens. e.g. what an adjective describes, what's the subject and the object of a given verb ...etc.
+
+__Fin__ gives you those processors out of the box. But in the real world use cases, the result of such processors may not be of a great use. This is why it has been designed to be extensible in a way that each extension build it's results on top of the aforementioned processors and may require other extensions as well.
+
+Those extensions (that relies on the aforementioned processors) is what we're going to call "detectors" through this documentation.
+
+For example using the tokens and the dependency parser you can detect local token emphasis. So a sentence like this one: `"Alex explicitly stated his dissatisfaction"` a detector can look for adverbs of emphasis, like `"explicitly"` and based on the dependency parser looks for the nearest ancestral verb, which is `"stated"` in the above example and mark it as being emphasized.
 
 ## Comparison with Other Solutions
 
@@ -47,4 +50,4 @@ The current state of natural language processing in javascript can not be descri
 
 ## Getting Started
 
-Before you can write and use detectors, you must have a good background on the processors being provided by this library and how you can utilize them to write better and more sensitive detectors.
+You should head over to the sidebar menu and read about the processors and how to author detectors.
