@@ -1,5 +1,5 @@
 module.exports = {
-	menu:[{title:"Home",href:"http://www.fin.run"},{title:"Demo",href:"demo.fin.run"},{title:"GitHub",href:"https://github.com/FinNLP"}],
+	menu:[{title:"Home",href:"http://www.fin.run"},{title:"Demo",href:"http://demo.fin.run"},{title:"GitHub",href:"https://github.com/FinNLP"}],
 	fixed_footer:"<a href='https://github.com/FinNLP/documentation' target='_blank'>Fork this document</a>",
 	logo:`<svg version="1.0" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 13510 16000" preserveAspectRatio="xMidYMid meet">
 		<g id="layer1" fill="#fff" stroke="none">
