@@ -15,6 +15,6 @@ module.exports = {
 	description:"Natural language processing in Node.js",
 	baseurl:"http://docs.fin.run",
 	ga:"UA-96433732-1",
-	disqusid:"doc-fin-run",
+	disqusid:"docs-fin-run",
 	previewPort:3000
 };
