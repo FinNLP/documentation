@@ -1,5 +1,5 @@
 module.exports = {
-	menu:[{title:"Home",href:"./index.html"},{title:"Demo",href:"demo"},{title:"GitHub",href:"github"}],
+	menu:[{title:"Home",href:"http://www.fin.run"},{title:"Demo",href:"demo.fin.run"},{title:"GitHub",href:"https://github.com/FinNLP"}],
 	fixed_footer:"<a href='https://github.com/FinNLP/documentation' target='_blank'>Fork this document</a>",
 	logo:`<svg version="1.0" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 13510 16000" preserveAspectRatio="xMidYMid meet">
 		<g id="layer1" fill="#fff" stroke="none">
@@ -13,7 +13,7 @@ module.exports = {
 	js:"",
 	title:"Fin",
 	description:"Natural language processing in Node.js",
-	baseurl:"http://127.0.0.1",
+	baseurl:"http://docs.fin.run",
 	ga:"123",
 	disqusid:"465",
 	previewPort:3000
